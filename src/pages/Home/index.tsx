@@ -4,11 +4,12 @@ import { useNotification } from "../../context/notification.context";
 
 export const HomePage: React.FC<{}>=()=>{
 
-  const {getError}=useNotification()
+  const {getError,getSuccess}=useNotification()
 
   
   const handleClick = () => {
-    getError('Hola')
+    // getError('Hola')
+    getSuccess('Todo perfecto campeon')
   }
   
     return(
