@@ -3,8 +3,6 @@ import { Box, Button, CircularProgress, Container, Grid, Pagination } from "@mui
 import { CardComponent, HeaderComponent } from "../../components";
 import { characters } from "../../api/characters";
 import { ICharacter } from "./interface/character.interface";
-
-
 export const HomePage: React.FC<{}>=()=>{
 
   const [allCharacters,setAllCharacters]=React.useState<ICharacter[] | null>(null);
@@ -43,8 +41,8 @@ export const HomePage: React.FC<{}>=()=>{
             {allCharacters?.length!==0 ? (
               <Grid container spacing={2} sx={{my:2}}>
               {allCharacters?.map((character)=>(
-                <Grid item xs={3}>
-                  <CardComponent key={character.id} id={character.id} image={character.image} name={character.name}species={character.species}status={character.status} />
+                <Grid item xs={3} key={character.id} >
+                  <CardComponent id={character.id} image={character.image} name={character.name}species={character.species}status={character.status} />
                 </Grid> 
               ))}
               </Grid>
