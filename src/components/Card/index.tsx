@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { addToCart } from '../../redux/slices/cart.slice';
+import { setItem } from '../../utils/localStorage';
 type CardProps={
     id:number;
     image:string;
@@ -23,6 +24,7 @@ export const CardComponent: React.FC<CardProps> = ({id,image,name,species,status
   useEffect(()=>{
     //   ? setDisabled(true) : setDisabled(false)
     setDisabled(itemExist.some((item)=>item.id===id))
+    setItem('cart',itemExist)
   },[itemExist,id])
 
   const handleAddToCart = ()=>{
