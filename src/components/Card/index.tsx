@@ -30,7 +30,7 @@ export const CardComponent: React.FC<CardProps> = ({id,image,name,species,status
       id,
       name,
       image,
-      info: status,
+      info: species,
     }))
   }
 
@@ -39,12 +39,12 @@ export const CardComponent: React.FC<CardProps> = ({id,image,name,species,status
         <CardMedia component="img"
         height="194"
         image={image}
-        alt="Paella dish"/>
+        alt="Rick and Morty"/>
         <CardContent>
             <Typography sx={{mt:1.5}} variant='h4'>{name}</Typography>
             <Divider/>
-            <Typography sx={{mt:1.5}}>Species:{species}</Typography>
-            <Typography sx={{mt:1.5}}>Status:{status}</Typography>
+            <Typography sx={{mt:1.5}}>Species: {species}</Typography>
+            <Typography sx={{mt:1.5}}>Status: {status}</Typography>
         </CardContent>
         <CardActions>
             <Button fullWidth onClick={()=>navigate(`/character/${id}`)} variant='contained'size='small'>Learn More</Button>
