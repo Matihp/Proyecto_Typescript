@@ -30,7 +30,7 @@ export const LoginPage: React.FC<{}>=()=>{
         <Grid item>
             <Paper 
               sx={{padding:"1.2em",borderRadius:"0.5em"}}>
-                <Typography variant="h4"sx={{mt:"1vh",mb:"1vh"}}>Iniciar sesion</Typography>
+                <Typography variant="h4"sx={{mt:"1vh",mb:"1vh"}}>Log in</Typography>
                 <Box component='form' onSubmit={formik.handleSubmit}>
                     <TextField 
                         name='username' type='text' fullWidth label="Email" sx={{mt:"2vh",mb:"1.5vh"}}margin='normal' value={formik.values.username}
