@@ -30,7 +30,7 @@ export const HomePage: React.FC<{}>=()=>{
   
     return(
     <Container maxWidth="xl">
-      <HeaderComponent title="Hola muchachos"description="Bienvenidos"element={<Button variant="contained">Comprar</Button>}/>
+      <HeaderComponent title="Hola"description="Bienvenidos"element={<Button variant="contained">Comprar</Button>}/>
       {loading ? (
         <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
           <CircularProgress />
@@ -46,7 +46,7 @@ export const HomePage: React.FC<{}>=()=>{
                 </Grid> 
               ))}
               </Grid>
-            ) : ('nada')}
+            ) : ('')}
           </>
           <Box sx={{width:'100%',display:'flex',justifyContent:'center'}}>
            <Pagination count={count} page={page} onChange={handleChange} variant="outlined" color="secondary"size="large" sx={{mb:3,mt:2}}/> 
