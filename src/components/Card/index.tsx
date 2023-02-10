@@ -39,9 +39,9 @@ export const CardComponent: React.FC<CardProps> = ({id,image,name,species,status
   return (
     <Card>
         <CardMedia component="img"
-        height="194"
+        height="195"
         image={image}
-        alt="Rick and Morty"/>
+        alt="Character"/>
         <CardContent>
             <Typography sx={{mt:1.5}} variant='h4'>{name}</Typography>
             <Divider/>
