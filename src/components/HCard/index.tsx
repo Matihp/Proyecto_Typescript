@@ -26,7 +26,7 @@ export const HCardComponent: React.FC<HCardComponentProps> = ({
 
   return (
     <Card sx={{ display: 'flex', my: 2 }}>
-      <CardMedia component="img" sx={{ width: 155 }} image={image} alt="Rick and Morty"/>
+      <CardMedia component="img" sx={{ width: 155 }} image={image} alt="character"/>
       <Grid container sx={{ mx: 1 }}>
         <Grid item xs={9}>
           <CardContent>
